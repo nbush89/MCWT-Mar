@@ -1,4 +1,4 @@
-# MCWT-Mar
+# README
 
 This is your repository for class examples, notes and other coding related material.
 
