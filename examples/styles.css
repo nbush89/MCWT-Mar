@@ -1,0 +1,26 @@
+.top-right{
+    background-color: aqua;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+body{
+    height: 100vh;
+}
+
+.bordered{
+    border: black solid 1px;
+    position: relative;
+    height: 1.5em;
+    width: 60vw;
+    font-size: 60px;
+}
+.bottom-right{
+    position: absolute;
+    right: 0;
+    bottom: -1em;
+}
+img{
+    height: 300px;
+}
