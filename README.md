@@ -16,8 +16,13 @@ mkdir "folderName" - creates a folder
 
 for running the javascript files on their own without and index.html file you can run the command:
 
-node <filename>.js
+node yourFile.js
+
 OR
-nodemon <filename>.js --this will continuously watch for changes in your file and rerun your node command everytime you save so you only have to run a command once
+
+nodemon yourFile.js
+
+\*\*this will continuously watch for changes in your file and rerun your node command everytime you save so you only have to run a command once
 \*\*Note, you need to install nodemon using your command line in your terminal/gitbash
+
 npm install -g nodemon
