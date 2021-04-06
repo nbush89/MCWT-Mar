@@ -31,15 +31,3 @@ console.log(account);
 feeAccount.addInterest();
 feeAccount.applyFee();
 console.log(feeAccount);
-
-let objects = [
-    {
-    name: "Jane",
-    score: 95,
-    date: "2020-01-24",
-    passed: true
-},
-{
-    
-}
-]
