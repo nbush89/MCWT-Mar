@@ -13,3 +13,17 @@ ls - shows all the files/folders in a directory
 touch "fileName" - creates a file
 
 mkdir "folderName" - creates a folder
+
+for running the javascript files on their own without and index.html file you can run the command:
+
+node yourFile.js
+
+OR
+
+nodemon yourFile.js
+
+\*\*this will continuously watch for changes in your file and rerun your node command everytime you save so you only have to run a command once
+\*\*Note, you need to install nodemon using your command line in your terminal/gitbash
+and restart VSCode for it to work
+
+npm install -g nodemon
