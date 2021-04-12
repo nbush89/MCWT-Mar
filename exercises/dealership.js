@@ -89,3 +89,4 @@ function areThereAnyHybridsForSale(arrayofCars){
 }
 
 console.log(areThereAnyHybridsForSale(dealership));
+
