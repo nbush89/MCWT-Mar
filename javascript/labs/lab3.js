@@ -6,15 +6,16 @@ let submissions = [
 ];
 
 function addSubmission(array, newName, newScore, newDate) {
-  array.push({
+  const newStudent = {
     name: newName,
     score: newScore,
     date: newDate,
     passed: newScore >= 60,
-  });
+  };
+  array.push(newStudent);
 }
-// addSubmission(submissions, "Nicole", 99, "2020-06-23");
-// console.log(submissions);
+addSubmission(submissions, "Nicole", 99, "2020-06-23");
+console.log(submissions);
 
 function deleteSubmissionByIndex(array, index) {
   array.splice(index, 1);
