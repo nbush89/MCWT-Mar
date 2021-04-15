@@ -1,0 +1,45 @@
+body {
+  margin: 0px;
+  position: relative;
+}
+.fa-bars {
+  font-size: 24px;
+  background-color: aquamarine;
+}
+button {
+  background-color: aquamarine;
+}
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  background-color: lightgrey;
+  height: 50px;
+}
+.menu {
+  display: block;
+  position: absolute;
+  border: 1px solid grey;
+  top: 50px;
+  margin-right: 10px;
+}
+.hide-menu {
+  display: none;
+}
+a {
+  display: block;
+}
+.numbers {
+  display: none;
+  font-size: 36px;
+  position: absolute;
+  width: 500px;
+  left: 30%;
+}
+.letters {
+  font-size: 36px;
+  position: absolute;
+  width: 500px;
+  left: 30%;
+}
