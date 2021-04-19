@@ -1,0 +1,34 @@
+#coins-area {
+  margin-top: 6px;
+}
+
+.coin {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 50%;
+  border: 3px solid gray;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.circle {
+  border-radius: 50%;
+}
+.penny {
+  background: url("penny.jpg");
+  background-size: 80px;
+}
+.nickel {
+  background-image: url("./nickel.jpg");
+  background-size: 80px;
+}
+.dime {
+  background-image: url("./dime.jpg");
+  background-size: 80px;
+}
+.quarter {
+  background-image: url("./quarter.png");
+  background-size: 80px;
+}
