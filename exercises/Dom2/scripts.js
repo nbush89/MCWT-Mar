@@ -2,7 +2,7 @@ let menuBtn = document.getElementById('menuBtn');
 menuBtn.addEventListener('click',showHideMenu);
 function showHideMenu(){
     let menu = document.getElementById('menu');
-    menu.classList.toggle('hide')
+    menu.classList.toggle('menuHide')
 }
 function showLetters(event){
     event.preventDefault();
