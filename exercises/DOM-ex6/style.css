@@ -1,0 +1,16 @@
+.gridArea {
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+}
+.square {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  background-color: black;
+}
+.grid-container {
+  padding: 5px;
+  background-color: black;
+  width: 527px;
+}
