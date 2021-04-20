@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    transition: background-color 1s ease-out;
+    width: 24vw;
+    height: 24vw;
+    background-color: #aaa;
+    border: #888 solid 1px;
+}
+
+.clicked{
+    background-color: green;
+}
+.game-over .clicked{
+    background-color: yellow;
+}
+
+.yellow{
+    background-color: yellow;
+}
