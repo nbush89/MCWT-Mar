@@ -9,8 +9,10 @@
   border: 1px solid white;
   background-color: black;
 }
-body {
-  background-color: green;
+.grid-container {
+  padding: 5px;
+  background-color: black;
+  width: 527px;
 }
 .purple {
   background-color: purple;
