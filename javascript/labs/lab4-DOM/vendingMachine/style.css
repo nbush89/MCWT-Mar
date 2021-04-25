@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.buttons {
+  display: flex;
+}
+.total {
+  display: flex;
+  align-items: center;
+}
+button {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+}

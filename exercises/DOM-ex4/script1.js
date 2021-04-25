@@ -12,7 +12,6 @@ form.addEventListener("submit", (e) => {
     //countCount allows us to know when the loop should stop
     let coin = document.createElement("div");
     coin.classList.add("coin");
-    // coin.innerText = coinType;
     coin.id = coinType;
     coin.classList.add(coinType);
     if (coinType === "penny") {
@@ -33,7 +32,6 @@ coinsArea.addEventListener("click", (e) => {
   console.log(e);
   if (e.target.id === "penny") {
     total -= 1;
-    // e.target.remove()
   } else if (e.target.id === "nickel") {
     total -= 5;
   } else if (e.target.id === "dime") {
@@ -42,5 +40,4 @@ coinsArea.addEventListener("click", (e) => {
     total -= 25;
   }
   totalChange.innerText = `Your total money is $${(total / 100).toFixed(2)}`;
-  //added comment
 });
