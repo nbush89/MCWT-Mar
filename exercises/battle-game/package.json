@@ -1,0 +1,21 @@
+{
+  "name": "battle-game",
+  "version": "1.0.0",
+  "description": "1. In the terminal, run `npm init`  (Accept all defaults.)\r 2. Run `npm install --save-dev karma jasmine karma-jasmine karma-chrome-launcher`\r 3. Run `karma init`  (Select jasmine for framework, Chrome for browser, and src/*.js and test/*.js for location of your files. For everything else, use the defaults.)\r 4. Finally run `karma start` to kick off the tests. It will automatically re-run them every time you save a file.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.7.0",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1"
+  }
+}

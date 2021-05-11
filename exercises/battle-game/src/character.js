@@ -4,7 +4,7 @@ class Character {
         this.name = options.name;
         this.startingHealth = this.health = options.health;
         this.minAttackDamage = options.minAttackDamage;
-        this.maxAttackDamage = options.minAttackDamage;
+        this.maxAttackDamage = options.maxAttackDamage;
         this.wins = 0;
         this.generateRandomIntegerBetween = generateRandomIntegerBetween;
     }
@@ -21,11 +21,11 @@ class Character {
     }
 
     isDead() {
-        return this.health < 0;
+        return this.health <= 0;
     }
 
     restoreHealth() {
-        this.health = startingHealth;
+        this.health = this.startingHealth;
     }
 
     getStatusReport() {
