@@ -1,0 +1,11 @@
+<input [(ngModel)] = "noun" (ngModelChange)="onUpdate()"/>
+
+<button (click)="onUpdate()">Click ME</button>
+<h1 [ngClass]="classList"  *ngIf="showText">Angular is fun! It is built using the {{noun}} design pattern.</h1>
+<div *ngFor="let person of people; let i = index">
+    {{person.firstName}}
+    <h2></h2>
+    <p>
+</div>
+<h3>{{"TEST" | lowercase}}</h3>
+<h3>{{"my test" | uppercase}}</h3>
