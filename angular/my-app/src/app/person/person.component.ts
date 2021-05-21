@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Person} from '../app.component';
 
 @Component({
   selector: 'app-person',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
+  @Input()singlePerson?: Person;
+  @Output()changed = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  update(): void{
+    this.changed.emit();
+  }
 }

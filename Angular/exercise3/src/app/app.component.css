@@ -1,0 +1,8 @@
+.circle{
+    border-radius: 50%;
+}
+div{
+    margin-top: 10px;
+    border: 1px skyblue solid;
+    background-color: lightblue;
+}

@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
+import { LogService } from './log.service';
+import { PeopleService } from './people.service';
 
-
+export interface Person {
+  firstName:string; 
+  lastName:string; 
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,25 +20,20 @@ export class AppComponent {
     red: this.noun === "red"
   }
   
-  people : {firstName:string; lastName:string; color: string}[] = [
-    {
-    firstName:"Grant",
-    lastName: "Chirpus",
-    color: "orange"
-  },
-  {
-    firstName: "Luke",
-    lastName: "Skywalker",
-    color: "blue"
-  },
-  {
-    firstName: "Darth",
-    lastName: "Vader",
-    color: "red"
-  }
-]
+  
+  constructor(private log:LogService, public people: PeopleService){}
   onUpdate(){
     //this.showText = !this.showText;
-    this.classList.red = this.noun === "red"
+    this.log.log("I AM A MESSGAE");
+    if(this.noun.length < 4){
+      this.classList.red = true
+    }else if(this.noun.length < 10){
+      this.classList.yellow = true
+    }else{
+      this.classList.green = true
+    }
+  }
+  onPersonUpdate(index: number){
+    this.people.removePerson(index);
   }
 }

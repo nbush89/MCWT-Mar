@@ -1,0 +1,8 @@
+<input [(ngModel)]="diameter" (ngModelChange)="update()" />
+<label>Diameter</label>
+<input type="checkbox" [(ngModel)]="isCircle" (ngModelChange)="update()">
+<label>Is a Circle?</label>
+<br>
+<label>Color</label>
+<input [(ngModel)]="color" type="color" (ngModelChange)="update()">
+<div [ngClass]="classList" [ngStyle]="styles"></div>
