@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { LogService } from './log.service';
-import { PeopleService } from './people.service';
+import { Component, OnInit } from '@angular/core';
+import { PeopleService, PersonResponse } from './people.service';
 
 export interface Person {
   firstName:string; 
@@ -11,7 +10,7 @@ export interface Person {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
   noun='';
   adverb='';
   showText = true
@@ -19,12 +18,9 @@ export class AppComponent {
   classList: any ={
     red: this.noun === "red"
   }
-  
-  
-  constructor(private log:LogService, public people: PeopleService){}
+  people: Person[] = [];
+  constructor(public peopleApi: PeopleService){}
   onUpdate(){
-    //this.showText = !this.showText;
-    this.log.log("I AM A MESSGAE");
     if(this.noun.length < 4){
       this.classList.red = true
     }else if(this.noun.length < 10){
@@ -33,7 +29,13 @@ export class AppComponent {
       this.classList.green = true
     }
   }
-  onPersonUpdate(index: number){
-    this.people.removePerson(index);
+  ngOnInit(){
+    this.peopleApi.getPeople().subscribe((people:any )=>{
+      this.people = people.complete;
+    })
+  }
+  addTask(){
+      const newTask = {firstName: this.noun, lastName: "false"};
+      this.people.push(newTask);
   }
 }

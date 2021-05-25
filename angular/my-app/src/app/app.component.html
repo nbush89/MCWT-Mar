@@ -1,8 +1,8 @@
 <input [(ngModel)] = "noun" (ngModelChange)="onUpdate()"/>
 
-<button (click)="onUpdate()">Click ME</button>
+<button (click)="addTask()">Click ME</button>
 <h1 [ngClass]="classList"  *ngIf="showText">Angular is fun! It is built using the {{noun}} design pattern.</h1>
-<app-person *ngFor="let person of people.getPeople(); let i = index" [singlePerson]="person" (changed)="onPersonUpdate(i)"></app-person>
+<app-person *ngFor="let person of people; let i = index" [singlePerson]="person"></app-person>
 <app-people-counter></app-people-counter>
 <h3 class="red">{{"TEST" | lowercase}}</h3>
 <h3>{{"my test" | uppercase}}</h3>
