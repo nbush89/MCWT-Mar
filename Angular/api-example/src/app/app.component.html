@@ -1,0 +1,6 @@
+<div *ngFor="let post of posts">
+  <h2>{{post.data.title}}</h2>
+  <img src="{{post.data.thumbnail}}">
+  <a [href]="'https://reddit.com/' + post.data.permalink">Link</a>
+  <p>{{post.data.doesntExist}}</p>
+</div>
