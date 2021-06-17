@@ -1,2 +1,15 @@
 <button [ngClass]="buttonClass" (click)="changeButton()">Click Me</button>
 <p>{{myString}}</p>
+<form (ngSubmit)='addNumbers()'>
+    <input name="number1" [(ngModel)]='number1' type="number">
+    <input name="number2" [(ngModel)]='number2' type="number">
+    <button type="submit">Add</button>
+</form>
+<p>{{sum}}</p>
+<p *ngIf='sum > 0'>Positive</p>
+<p *ngIf='sum < 0'>Negative</p>
+<p *ngIf='sum === 0'>Zero</p>
+
+<ol>
+    <li (click)='checkName(i)' *ngFor='let name of names;index as i;' [ngClass]='{grey:name.checked}'>{{name.text}}</li>
+</ol>
