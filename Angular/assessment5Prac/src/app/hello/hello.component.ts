@@ -14,10 +14,10 @@ export class HelloComponent implements OnInit {
     this.serviceName = this.preferences.getName();
   }
   updateName(){
-    console.log(this.name)
-    this.preferences.setName(this.name);
 
+    this.preferences.setName(this.name);
+    this.name = '';
     this.serviceName = this.preferences.getName();
-    console.log(this.serviceName);
+    
   }
 }
