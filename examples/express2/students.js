@@ -1,11 +1,32 @@
 const express = require("express");
 const students = express.Router();
-
+const studentList = [
+  {
+    firstName: 'Luke',
+    lastName: 'Skywalker'
+  },
+  {
+    firstName: 'Darth',
+    lastName: 'Varder'
+  },
+  {
+    firstName: 'Obi Wan',
+    lastName: 'Kinobi'
+  },
+]
 // respond with "Hello Class!" at URI: /students
 students.get("/", (req, res) => {
-    let lastName = req.query["lastname"]
-    console.log("");
-    res.status(404).json(`Getting all students with last name: ${lastName}`);
+    let lastName = req.query.lastName
+    
+    let returnStudents = studentList;
+    if(lastName){
+      console.log(typeof lastName, lastName)
+      returnStudents = studentList.filter((student)=>student.lastName.toLowerCase() === lastName.toLowerCase())
+    }
+    if(req.query.firstName){
+      returnStudents = studentList.filter((student)=>student.firstName.toLowerCase() === req.query.firstName.toLowerCase())
+    }
+    res.json(returnStudents);
   });
   students.get("/:id", (req, res) => {
       let id = req.params.id;
@@ -21,8 +42,10 @@ students.get("/", (req, res) => {
   });
   
   // accept PUT request at URI: /students
-  students.put("/", (req, res) => {
-    res.json("Updating a student..");
+  students.put("/:id", (req, res) => {
+    let updatedStudent = req.body;
+    studentList[req.params.id] = {...studentList[req.params.id], ...updatedStudent};
+    res.json(studentList[req.params.id])
   });
   
   // accept DELETE request at URI: /students
